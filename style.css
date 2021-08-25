@@ -4,6 +4,7 @@
   }
   
   body {
+    font-family: 'Poppins', sans-serif;
     background: #8AB6D6;
     display: flex;
     justify-content: center;
