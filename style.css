@@ -1,0 +1,114 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+body{ 
+    /* background: #001E6C; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock {
+    margin-top: 10vh;
+    margin-left: 10vw;
+    width: 300px;
+    height: 300px;
+    background-color: #FBE0C4;
+    border-radius: 100%;
+    border: 2px solid black;
+    position: relative;
+}
+.number{
+    position: absolute;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.number1{
+    transform: rotate(30deg);
+}
+.number2{
+    transform: rotate(60deg);
+}
+.number3{
+    transform: rotate(90deg);
+}
+.number4{
+    transform: rotate(120deg);
+}
+.number5{
+    transform: rotate(150deg);
+}
+.number6{
+    transform: rotate(180deg);
+}
+.number7{
+    transform: rotate(210deg);
+}
+.number8{
+    transform: rotate(240deg);
+}
+.number9{
+    transform: rotate(270deg);
+}
+.number10{
+    transform: rotate(300deg);
+}
+.number11{
+    transform: rotate(330deg);
+}
+.number12{
+    transform: rotate(360deg);
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+
+.clock .hand.second{
+    width: 3px;
+    height: 45%;
+    background-color: red;
+}
+.clock .hand.minute{
+    width: 7px;
+    height: 40%;
+    background-color: black;
+}
+.clock .hand.hour{
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
+
+
+  
